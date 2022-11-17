@@ -3,12 +3,19 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import '../common/styles.dart';
 import '../data/model/restaurant_detail_model.dart';
+import '../provider/restaurant_detail_provider.dart';
+import 'bottom_sheet_review.dart';
 import 'card_menu.dart';
 
 class ContentRestaurant extends StatelessWidget {
   final RestaurantDetail restaurant;
+  final RestaurantDetailProvider provider;
 
-  const ContentRestaurant({super.key, required this.restaurant});
+  const ContentRestaurant({
+    super.key,
+    required this.restaurant,
+    required this.provider,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +104,24 @@ class ContentRestaurant extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         GestureDetector(
-                          onTap: () => _showReviewBottomSheet(context),
+                          onTap: () {
+                            showModalBottomSheet(
+                              context: context,
+                              backgroundColor: Colors.white,
+                              shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(18),
+                                  topRight: Radius.circular(18),
+                                ),
+                              ),
+                              builder: (context) {
+                                return BottomSheetReview(
+                                  provider: provider,
+                                  restaurant: restaurant,
+                                );
+                              },
+                            );
+                          },
                           child: Text(
                             'Lihat Review',
                             style: Theme.of(context)
@@ -165,7 +189,7 @@ class ContentRestaurant extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 SizedBox(
-                  height: 150,
+                  height: 180,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     padding: const EdgeInsets.symmetric(
@@ -187,7 +211,7 @@ class ContentRestaurant extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 SizedBox(
-                  height: 150,
+                  height: 180,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     padding: const EdgeInsets.symmetric(
@@ -207,82 +231,6 @@ class ContentRestaurant extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-
-  Future<dynamic> _showReviewBottomSheet(BuildContext context) {
-    return showModalBottomSheet(
-      context: context,
-      backgroundColor: Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(18),
-          topRight: Radius.circular(18),
-        ),
-      ),
-      builder: (context) {
-        return Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              child: Row(
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.close),
-                    onPressed: () => Navigator.pop(context),
-                  ),
-                  const SizedBox(width: 16),
-                  Text(
-                    'Review',
-                    style: Theme.of(context).textTheme.headline6,
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: ListView(
-                padding: const EdgeInsets.only(bottom: 6),
-                children: restaurant.customerReviews.map((review) {
-                  return Container(
-                    margin: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 6,
-                    ),
-                    decoration: BoxDecoration(
-                      border: Border.all(color: primaryColor),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ListTile(
-                          leading: const CircleAvatar(
-                            backgroundColor: primaryColor,
-                            child: Icon(Icons.person, color: Colors.white),
-                          ),
-                          title: Text(review.name),
-                          subtitle: Text(review.date),
-                        ),
-                        const Divider(height: 1),
-                        Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Text(
-                            review.review,
-                            style: Theme.of(context)
-                                .textTheme
-                                .subtitle1!
-                                .copyWith(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                }).toList(),
-              ),
-            ),
-          ],
-        );
-      },
     );
   }
 }

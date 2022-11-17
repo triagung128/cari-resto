@@ -41,4 +41,29 @@ class RestaurantDetailProvider extends ChangeNotifier {
       return _message = 'Error --> $e';
     }
   }
+
+  Future<dynamic> postReview({
+    required String id,
+    required String name,
+    required String review,
+  }) async {
+    try {
+      final postReviewResult = await apiService.postReview(
+        id: id,
+        name: name,
+        review: review,
+      );
+      if (postReviewResult.error == false &&
+          postReviewResult.message == 'success') {
+        fetchDetailRestaurant(id);
+
+        return ResultState.success;
+      }
+    } catch (e) {
+      _state = ResultState.error;
+      notifyListeners();
+
+      return _message = 'Error --> $e';
+    }
+  }
 }

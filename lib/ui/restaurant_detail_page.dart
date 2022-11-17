@@ -44,6 +44,7 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
                 return const LoadingProgress();
               case ResultState.hasData:
                 return ContentRestaurant(
+                  provider: provider,
                   restaurant: provider.result.restaurant,
                 );
               case ResultState.error:
