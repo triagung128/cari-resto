@@ -2,32 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../data/api/api_service.dart';
+import '../data/model/restaurant_list_model.dart';
 import '../provider/restaurant_detail_provider.dart';
 import '../data/enum/result_state.dart';
 import '../widget/content_restaurant.dart';
 import '../widget/text_message.dart';
 import '../widget/loading_progress.dart';
 
-class RestaurantDetailPage extends StatefulWidget {
+class RestaurantDetailPage extends StatelessWidget {
   static const routeName = '/restaurant_detail';
 
-  final String restaurantId;
+  final Restaurant restaurant;
 
-  const RestaurantDetailPage({super.key, required this.restaurantId});
-
-  @override
-  State<RestaurantDetailPage> createState() => _RestaurantDetailPageState();
-}
-
-class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
-  late RestaurantDetailProvider _provider;
+  const RestaurantDetailPage({super.key, required this.restaurant});
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<RestaurantDetailProvider>(
       create: (_) => RestaurantDetailProvider(
         apiService: ApiService(),
-        restaurantId: widget.restaurantId,
+        restaurantId: restaurant.id,
       ),
       child: _buildContent(context),
     );
@@ -38,7 +32,6 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
       body: SafeArea(
         child: Consumer<RestaurantDetailProvider>(
           builder: (_, provider, __) {
-            _provider = provider;
             switch (provider.state) {
               case ResultState.loading:
                 return const LoadingProgress();
@@ -52,7 +45,7 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
                   image: 'assets/images/no-internet.png',
                   message: 'Koneksi Terputus',
                   onPressed: () =>
-                      _provider.fetchDetailRestaurant(widget.restaurantId),
+                      provider.fetchDetailRestaurant(restaurant.id),
                 );
               default:
                 return const SizedBox();

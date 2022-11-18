@@ -15,7 +15,7 @@ class CardRestaurant extends StatelessWidget {
         Navigator.pushNamed(
           context,
           RestaurantDetailPage.routeName,
-          arguments: restaurant.id,
+          arguments: restaurant,
         );
       },
       child: Container(

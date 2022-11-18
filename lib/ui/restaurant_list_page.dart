@@ -9,17 +9,10 @@ import '../widget/text_message.dart';
 import '../widget/loading_progress.dart';
 import 'restaurant_search_page.dart';
 
-class RestaurantListPage extends StatefulWidget {
+class RestaurantListPage extends StatelessWidget {
   static const routeName = '/restaurant_list';
 
   const RestaurantListPage({super.key});
-
-  @override
-  State<RestaurantListPage> createState() => _RestaurantListPageState();
-}
-
-class _RestaurantListPageState extends State<RestaurantListPage> {
-  late RestaurantListProvider _provider;
 
   @override
   Widget build(BuildContext context) {
@@ -49,8 +42,6 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
   Widget _buildList() {
     return Consumer<RestaurantListProvider>(
       builder: (_, provider, __) {
-        _provider = provider;
-
         switch (provider.state) {
           case ResultState.loading:
             return const LoadingProgress();
@@ -75,7 +66,7 @@ class _RestaurantListPageState extends State<RestaurantListPage> {
             return TextMessage(
               image: 'assets/images/no-internet.png',
               message: 'Koneksi Terputus',
-              onPressed: () => _provider.fetchAllRestaurant(),
+              onPressed: () => provider.fetchAllRestaurant(),
             );
           default:
             return const SizedBox();
