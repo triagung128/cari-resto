@@ -25,6 +25,7 @@ class _RestaurantSearchPageState extends State<RestaurantSearchPage> {
     return ChangeNotifierProvider(
       create: (_) => RestaurantSearchProvider(apiService: ApiService()),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: const Text('Search'),
         ),

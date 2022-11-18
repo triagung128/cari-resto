@@ -32,42 +32,46 @@ class DialogReview extends StatelessWidget {
         key: _formKey,
         child: SizedBox(
           width: width,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextFormField(
-                controller: _nameController,
-                keyboardType: TextInputType.name,
-                textInputAction: TextInputAction.next,
-                decoration: const InputDecoration(
-                  labelText: 'Nama',
-                  border: OutlineInputBorder(),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextFormField(
+                  controller: _nameController,
+                  keyboardType: TextInputType.name,
+                  textInputAction: TextInputAction.next,
+                  decoration: const InputDecoration(
+                    labelText: 'Nama',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                  validator: (value) {
+                    if (value.toString().isEmpty) {
+                      return 'Nama tidak boleh kosong!';
+                    }
+                    return null;
+                  },
                 ),
-                validator: (value) {
-                  if (value.toString().isEmpty) {
-                    return 'Nama tidak boleh kosong!';
-                  }
-                  return null;
-                },
-              ),
-              const SizedBox(height: 16),
-              TextFormField(
-                controller: _reviewController,
-                keyboardType: TextInputType.multiline,
-                textInputAction: TextInputAction.newline,
-                maxLines: 4,
-                decoration: const InputDecoration(
-                  labelText: 'Review',
-                  border: OutlineInputBorder(),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _reviewController,
+                  keyboardType: TextInputType.multiline,
+                  textInputAction: TextInputAction.newline,
+                  maxLines: 4,
+                  decoration: const InputDecoration(
+                    labelText: 'Review',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                  validator: (value) {
+                    if (value.toString().isEmpty) {
+                      return 'Review tidak boleh kosong!';
+                    }
+                    return null;
+                  },
                 ),
-                validator: (value) {
-                  if (value.toString().isEmpty) {
-                    return 'Review tidak boleh kosong!';
-                  }
-                  return null;
-                },
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
