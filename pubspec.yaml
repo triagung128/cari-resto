@@ -41,6 +41,8 @@ dependencies:
   http: ^0.13.5
   provider: ^6.0.4
   lottie: ^2.0.0
+  shared_preferences: ^0.5.5
+  sqflite: ^2.2.0+3
 
 dev_dependencies:
   flutter_test:
