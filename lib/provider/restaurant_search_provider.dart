@@ -10,12 +10,13 @@ class RestaurantSearchProvider extends ChangeNotifier {
   RestaurantSearchProvider({required this.apiService});
 
   late RestaurantSearchResult _restaurantSearchResult;
-  ResultState? _state;
-  String _message = '';
-
-  String get message => _message;
   RestaurantSearchResult get result => _restaurantSearchResult;
+
+  ResultState? _state;
   ResultState? get state => _state;
+
+  String _message = '';
+  String get message => _message;
 
   Future<dynamic> fetchSearchRestaurant(String query) async {
     try {
