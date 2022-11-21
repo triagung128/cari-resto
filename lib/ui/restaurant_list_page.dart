@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../data/api/api_service.dart';
 import '../provider/restaurant_list_provider.dart';
 import '../data/enum/result_state.dart';
 import '../widget/card_restaurant.dart';
@@ -16,18 +15,15 @@ class RestaurantListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<RestaurantListProvider>(
-      create: (_) => RestaurantListProvider(apiService: ApiService()),
-      child: Scaffold(
-        appBar: _buildAppBar(context),
-        body: _buildList(),
-      ),
+    return Scaffold(
+      appBar: _buildAppBar(context),
+      body: _buildList(),
     );
   }
 
   AppBar _buildAppBar(BuildContext context) {
     return AppBar(
-      title: const Text('Restaurant App'),
+      title: const Text('Cari Restoran'),
       actions: [
         IconButton(
           icon: const Icon(Icons.search),
@@ -59,7 +55,7 @@ class RestaurantListPage extends StatelessWidget {
             );
           case ResultState.noData:
             return const TextMessage(
-              image: 'assets/images/no-data.png',
+              image: 'assets/images/empty-data.png',
               message: 'Data Kosong',
             );
           case ResultState.error:
