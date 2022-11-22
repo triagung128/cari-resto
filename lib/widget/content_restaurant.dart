@@ -64,6 +64,14 @@ class ContentRestaurant extends StatelessWidget {
                                   onPressed: () {
                                     providerFavorite
                                         .removeFavorite(restaurant.id);
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                        duration: Duration(seconds: 1),
+                                        content: Text(
+                                          'Dihapuskan dari favorit',
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: const Icon(
                                     Icons.favorite,
@@ -80,6 +88,14 @@ class ContentRestaurant extends StatelessWidget {
                                         city: restaurant.city,
                                         pictureId: restaurant.pictureId,
                                         rating: restaurant.rating,
+                                      ),
+                                    );
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                        duration: Duration(seconds: 1),
+                                        content: Text(
+                                          'Ditambahkan ke favorit',
+                                        ),
                                       ),
                                     );
                                   },
