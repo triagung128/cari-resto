@@ -36,15 +36,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  google_fonts: ^3.0.1
+  google_fonts: ^4.0.1
   flutter_rating_bar: ^4.0.1
   http: ^0.13.5
   provider: ^6.0.4
   lottie: ^2.0.0
   shared_preferences: ^2.0.15
   sqflite: ^2.2.0+3
-  intl: ^0.17.0
-  flutter_local_notifications: ^12.0.3+1
+  intl: ^0.18.0
+  flutter_local_notifications: ^13.0.0
   rxdart: ^0.27.7
   android_alarm_manager_plus: ^2.1.0
 
