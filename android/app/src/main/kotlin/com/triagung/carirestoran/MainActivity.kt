@@ -1,4 +1,4 @@
-package com.triagung.restaurant_app
+package com.triagung.carirestoran
 
 import io.flutter.embedding.android.FlutterActivity
 
