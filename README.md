@@ -1,16 +1,34 @@
-# restaurant_app
+# :ramen: Cari Restoran
 
-A new Flutter project.
+Aplikasi pencarian restoran yang merupakan hasil submission akhir kelas [Dicoding Belajar Fundamental Aplikasi Flutter](https://www.dicoding.com/academies/195). Project ini dibangun menggunakan flutter dan state mangement yang digunakan menggunakan flutter provider.
 
-## Getting Started
+![Thumbnail 1](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/1.png)
+![Thumbnail 2](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/2.png)
 
-This project is a starting point for a Flutter application.
+## :tada: Features App
+- Recommended List Restaurant
+- Detail Restaurant
+- Show Rating & Reviews Restaurant
+- Search Restaurant
+- Favorite Restaurant
+- Review Restaurant
+- Daily Reminder
 
-A few resources to get you started if this is your first Flutter project:
+## :loudspeaker: State Management
+- Flutter Provider
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## :hammer_and_wrench: Dependencies
+- android_alarm_manager_plus
+- flutter_local_notifications
+- flutter_rating_bar
+- google_fonts
+- http
+- intl
+- lottie
+- provider
+- rxdart
+- shared_preferences
+- sqflite
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## :stop_sign: Disclaimer
+Mohon gunakan source code ini hanya untuk sebagai referensi belajar. Hindari plagiat !!!
