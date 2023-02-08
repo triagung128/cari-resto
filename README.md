@@ -2,8 +2,8 @@
 
 Aplikasi pencarian restoran yang merupakan hasil submission akhir kelas [Dicoding Belajar Fundamental Aplikasi Flutter](https://www.dicoding.com/academies/195). Project ini dibangun menggunakan flutter dan state mangement yang digunakan menggunakan flutter provider.
 
-![Thumbnail 1](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/1.png)
-![Thumbnail 2](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/2.png)
+![Thumbnail 1](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/banner_1.png)
+![Thumbnail 2](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/banner_2.png)
 
 ## :tada: Features App
 - Recommended List Restaurant
