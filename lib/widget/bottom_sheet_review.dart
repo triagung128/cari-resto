@@ -37,28 +37,28 @@ class BottomSheetReview extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    showDialog(
-                      context: context,
-                      barrierDismissible: false,
-                      builder: (_) {
-                        return DialogReview(
-                          provider: provider,
-                          restaurantId: restaurant.id,
-                        );
-                      },
-                    );
-                  },
-                  child: const Text(
-                    'Tambah Review',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(right: 16),
+              //   child: TextButton(
+              //     onPressed: () {
+              //       Navigator.pop(context);
+              //       showDialog(
+              //         context: context,
+              //         barrierDismissible: false,
+              //         builder: (_) {
+              //           return DialogReview(
+              //             provider: provider,
+              //             restaurantId: restaurant.id,
+              //           );
+              //         },
+              //       );
+              //     },
+              //     child: const Text(
+              //       'Tambah Review',
+              //       style: TextStyle(fontWeight: FontWeight.bold),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
