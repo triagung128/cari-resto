@@ -1,9 +1,11 @@
-# :ramen: Cari Restoran
+# :ramen: Cari Resto
 
-Aplikasi pencarian restoran yang merupakan hasil submission akhir kelas [Dicoding Belajar Fundamental Aplikasi Flutter](https://www.dicoding.com/academies/195). Project ini dibangun menggunakan flutter dan state mangement yang digunakan menggunakan flutter provider.
+Cari Resto adalah aplikasi yang membantu pengguna menemukan tempat makan yang sesuai dengan kebutuhan mereka. Aplikasi ini menyediakan informasi lengkap tentang setiap restoran, termasuk menu, foto, dan ulasan. Pengguna juga dapat memberikan ulasan.
 
-![Thumbnail 1](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/banner_1.png)
-![Thumbnail 2](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/banner_2.png)
+Project ini adalah final submission kelas [Dicoding Belajar Fundamental Aplikasi Flutter](https://www.dicoding.com/academies/195).
+
+![Thumbnail 1](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/1.png)
+![Thumbnail 2](https://github.com/triagung128/cari-restoran/blob/master/assets/banners/2.png)
 
 ## :iphone: Download Apps
 <a href='https://play.google.com/store/apps/details?id=com.triagung.carirestoran&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width=200 /></a>
