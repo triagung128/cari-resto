@@ -122,8 +122,9 @@ class ContentRestaurant extends StatelessWidget {
                                 children: [
                                   Text(
                                     restaurant.name,
-                                    style:
-                                        Theme.of(context).textTheme.headline5,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall,
                                   ),
                                   const SizedBox(height: 8),
                                   Row(
@@ -138,7 +139,7 @@ class ContentRestaurant extends StatelessWidget {
                                         restaurant.city,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .bodyText2!
+                                            .bodyMedium!
                                             .copyWith(
                                                 color: const Color(0xFF616161)),
                                       ),
@@ -157,7 +158,7 @@ class ContentRestaurant extends StatelessWidget {
                                     Text(
                                       '${restaurant.rating}',
                                       style:
-                                          Theme.of(context).textTheme.bodyText1,
+                                          Theme.of(context).textTheme.bodyLarge,
                                     ),
                                     const SizedBox(width: 4),
                                     RatingBarIndicator(
@@ -195,7 +196,7 @@ class ContentRestaurant extends StatelessWidget {
                                     'Lihat Review',
                                     style: Theme.of(context)
                                         .textTheme
-                                        .subtitle1!
+                                        .titleMedium!
                                         .copyWith(
                                             color: primaryColor,
                                             decoration:
@@ -209,7 +210,7 @@ class ContentRestaurant extends StatelessWidget {
                         const SizedBox(height: 24),
                         Text(
                           'Kategori :',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                         const SizedBox(height: 8),
                         SizedBox(
@@ -231,7 +232,7 @@ class ContentRestaurant extends StatelessWidget {
                                     category.name,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .subtitle1!
+                                        .titleMedium!
                                         .copyWith(
                                             fontWeight: FontWeight.w600,
                                             color: Colors.white),
@@ -244,18 +245,18 @@ class ContentRestaurant extends StatelessWidget {
                         const SizedBox(height: 24),
                         Text(
                           'Deskripsi :',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                         const SizedBox(height: 4),
                         Text(
                           restaurant.description,
                           textAlign: TextAlign.justify,
-                          style: Theme.of(context).textTheme.bodyText2,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         const SizedBox(height: 24),
                         Text(
                           'Menu Makanan :',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                         const SizedBox(height: 4),
                         SizedBox(
@@ -277,7 +278,7 @@ class ContentRestaurant extends StatelessWidget {
                         const SizedBox(height: 24),
                         Text(
                           'Menu Minuman :',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                         const SizedBox(height: 4),
                         SizedBox(

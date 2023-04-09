@@ -27,7 +27,7 @@ class DialogReview extends StatelessWidget {
       ),
       insetPadding: const EdgeInsets.all(16),
       title: const Text('Tambah Review'),
-      titleTextStyle: Theme.of(context).textTheme.headline6,
+      titleTextStyle: Theme.of(context).textTheme.titleLarge,
       content: Form(
         key: _formKey,
         child: SizedBox(

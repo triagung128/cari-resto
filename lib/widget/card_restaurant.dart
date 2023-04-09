@@ -78,7 +78,7 @@ class CardRestaurant extends StatelessWidget {
                               maxLines: 1,
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle2!
+                                  .titleSmall!
                                   .copyWith(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 18),
@@ -96,7 +96,7 @@ class CardRestaurant extends StatelessWidget {
                                   restaurant.city,
                                   style: Theme.of(context)
                                       .textTheme
-                                      .bodyText2!
+                                      .bodyMedium!
                                       .copyWith(color: const Color(0xFF616161)),
                                 ),
                               ],
@@ -120,7 +120,7 @@ class CardRestaurant extends StatelessWidget {
                                         '${restaurant.rating}',
                                         style: Theme.of(context)
                                             .textTheme
-                                            .bodyText2!
+                                            .bodyMedium!
                                             .copyWith(
                                                 color: const Color(0xFF616161)),
                                       ),

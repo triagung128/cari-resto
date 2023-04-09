@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../common/styles.dart';
 import '../data/model/restaurant_detail_model.dart';
 import '../provider/restaurant_detail_provider.dart';
-import 'dialog_review.dart';
 
 class BottomSheetReview extends StatelessWidget {
   final RestaurantDetail restaurant;
@@ -33,7 +32,7 @@ class BottomSheetReview extends StatelessWidget {
                   const SizedBox(width: 16),
                   Text(
                     'Review',
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ],
               ),
@@ -93,7 +92,7 @@ class BottomSheetReview extends StatelessWidget {
                         review.review,
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle1!
+                            .titleMedium!
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
                     ),

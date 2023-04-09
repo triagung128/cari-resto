@@ -90,7 +90,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             elevation: 0,
             color: secondaryColor,
-            titleTextStyle: Theme.of(context).textTheme.headline6!.copyWith(
+            titleTextStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
                   color: Colors.white,
                 ),
             iconTheme: const IconThemeData(color: Colors.white),

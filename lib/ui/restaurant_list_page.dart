@@ -23,7 +23,7 @@ class RestaurantListPage extends StatelessWidget {
 
   AppBar _buildAppBar(BuildContext context) {
     return AppBar(
-      title: const Text('Cari Restoran'),
+      title: const Text('Cari Resto'),
       actions: [
         IconButton(
           icon: const Icon(Icons.search),

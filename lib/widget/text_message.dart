@@ -26,7 +26,7 @@ class TextMessage extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             message,
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           const SizedBox(height: 8),
           if (onPressed != null)
