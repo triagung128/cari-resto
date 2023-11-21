@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../common/styles.dart';
 import '../utils/notification_helper.dart';
+
 import 'restaurant_detail_page.dart';
 import 'restaurant_favorites_page.dart';
 import 'restaurant_list_page.dart';

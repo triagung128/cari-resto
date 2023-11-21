@@ -2,10 +2,12 @@ import 'dart:isolate';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+
 import 'package:http/http.dart' as http;
 
 import '../data/api/api_service.dart';
 import '../main.dart';
+
 import 'notification_helper.dart';
 
 final ReceivePort port = ReceivePort();

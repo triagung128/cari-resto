@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:provider/provider.dart';
 
@@ -7,6 +8,7 @@ import '../data/model/restaurant_detail_model.dart';
 import '../data/model/restaurant_list_model.dart';
 import '../provider/database_provider.dart';
 import '../provider/restaurant_detail_provider.dart';
+
 import 'bottom_sheet_review.dart';
 import 'card_menu.dart';
 

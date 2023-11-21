@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
 
-import '../provider/restaurant_list_provider.dart';
 import '../data/enum/result_state.dart';
+import '../provider/restaurant_list_provider.dart';
 import '../widget/card_restaurant.dart';
-import '../widget/text_message.dart';
 import '../widget/loading_progress.dart';
+import '../widget/text_message.dart';
+
 import 'restaurant_search_page.dart';
 
 class RestaurantListPage extends StatelessWidget {

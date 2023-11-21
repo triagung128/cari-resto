@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
 
-import '../provider/database_provider.dart';
 import '../data/enum/result_state.dart';
+import '../provider/database_provider.dart';
 import '../widget/card_restaurant.dart';
 import '../widget/text_message.dart';
 

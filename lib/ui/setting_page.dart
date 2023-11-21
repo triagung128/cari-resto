@@ -1,5 +1,6 @@
-import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
+
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 

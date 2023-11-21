@@ -1,11 +1,12 @@
 import 'dart:io';
 
-import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 import 'package:flutter/material.dart';
+
+import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:http/http.dart' as http;
 
 import 'common/navigation.dart';
 import 'common/styles.dart';
@@ -77,9 +78,10 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        title: 'Cari Restoran',
+        title: 'Cari Resto',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          useMaterial3: false,
           colorScheme: Theme.of(context).colorScheme.copyWith(
                 primary: primaryColor,
                 onPrimary: Colors.black,
@@ -90,8 +92,9 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             elevation: 0,
             color: secondaryColor,
-            titleTextStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
+            titleTextStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
                   color: Colors.white,
+                  fontWeight: FontWeight.w600,
                 ),
             iconTheme: const IconThemeData(color: Colors.white),
           ),
